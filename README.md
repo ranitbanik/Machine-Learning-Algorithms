@@ -1,181 +1,69 @@
-# Basic Machine Learning Codes
+# Machine Learning Algorithms
 
-A growing collection of **Machine Learning codes, notebooks, examples, and practice implementations**, organized from **Basics to Moderate level**.
+A practical notebook collection for exploring fundamental machine learning techniques in Python. This repository is a study workspace: run an example, inspect its results, and experiment with parameters to understand how the model behaves.
 
-This repository is not a single project. It is a **learning and reference repository** where different machine learning concepts, algorithms, techniques, experiments, and implementations can be added over time.
+## At a glance
 
-## 📚 Repository Purpose
+| Notebook | Focus | What to explore |
+| --- | --- | --- |
+| [KNN.ipynb](KNN.ipynb) | K-nearest neighbors | Neighborhood size, predictions and evaluation |
+| [SVM.ipynb](SVM.ipynb) | Support vector machines | Classification and decision boundaries |
+| [Logistic_Regression.ipynb](Logistic_Regression.ipynb) | Logistic regression | A baseline classification workflow |
+| [Model_Training.ipynb](Model_Training.ipynb) | Model training | Fitting models and working with predictions |
 
-The goal of this repository is to build a structured collection of practical ML implementations while progressing from fundamental concepts to moderately advanced techniques.
+These are the **four notebooks currently included**, rather than a claim that the entire ML curriculum has been implemented.
 
-```text
-Machine Learning
-│
-├── Basics
-│   ├── Data Preparation
-│   ├── Regression
-│   ├── Classification
-│   ├── Model Evaluation
-│   └── Basic Visualization
-│
-└── Moderate
-    ├── Cross-Validation
-    ├── Hyperparameter Tuning
-    ├── Feature Engineering
-    ├── Feature Selection
-    ├── Ensemble Methods
-    ├── Dimensionality Reduction
-    └── Model Comparison
+## Run the notebooks
+
+You'll need Python 3 and a Jupyter-compatible environment. Clone this repository and install commonly used data science packages:
+
+```bash
+git clone https://github.com/rohitbiswas1/Machine-Learning-Algorithms.git
+cd Machine-Learning-Algorithms
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install jupyter numpy pandas scikit-learn matplotlib seaborn
+jupyter notebook
 ```
 
-## 🧠 Topics Covered / Planned
+On Windows, activate the environment using `.venv\Scripts\activate` (Command Prompt) or `.venv\Scripts\Activate.ps1` (PowerShell), then run the remaining commands.
 
-### 🔰 Basics
+You can also open the `.ipynb` files in Google Colab without installing Jupyter locally. Notebook dependencies may vary by example.
 
-- Introduction to Machine Learning concepts
-- Supervised and unsupervised learning fundamentals
-- Train-test split
-- Regression algorithms
-- Classification algorithms
-- Basic preprocessing
-- Performance metrics
-- Confusion matrix
-- Model visualization
+## How to learn from each example
 
-### 📈 Moderate
+1. Read through the code and identify the dataset, features and target.
+2. Run the cells in order, checking intermediate outputs.
+3. Change one parameter at a time and compare the result.
+4. Inspect evaluation metrics; avoid judging a model only by training accuracy.
+5. Record what changed, what improved and what did not.
 
-- Cross-validation
-- Hyperparameter tuning
-- Feature engineering
-- Feature selection
-- Pipelines
-- Ensemble learning
-- Dimensionality reduction
-- Model comparison
-- Handling common data-quality issues
-- More systematic evaluation of ML models
+## Concepts to practise next
 
-> The repository will grow gradually as new algorithms and techniques are added.
+- **Data preparation:** missing values, encoding, scaling, and train/test splits
+- **Supervised learning:** linear regression, decision trees, random forests, and Naive Bayes
+- **Unsupervised learning:** K-means clustering and principal component analysis
+- **Evaluation:** cross-validation, precision, recall, F1 score, and confusion matrices
+- **Model improvement:** pipelines and hyperparameter searches
 
-## 📂 Current Contents
+These are learning directions, **not files that are already present**.
 
-At present, the repository contains a Jupyter Notebook demonstrating **K-Nearest Neighbors (KNN) classification** with the Iris dataset.
-
-### Current Notebook — KNN Classification
-
-The notebook demonstrates:
-- Loading the Iris dataset using Scikit-learn
-- Stratified 80/20 train-test split
-- Testing K values from 1 to 30
-- 10-fold cross-validation
-- Automatic selection of the best K
-- KNN model training and prediction
-- Accuracy score
-- Classification report
-- Confusion matrix
-- Cross-validation performance visualization
-
-The current notebook selects **K = 5** and reports **100% accuracy** on its held-out test set for the configured split.
-
-## 🗂️ Suggested Repository Organization
-
-As more examples are added, notebooks can be organized by topic:
+## Repository layout
 
 ```text
-Basic-Machine-Learning-Codes/
-│
-├── Basics/
-│   ├── Regression/
-│   ├── Classification/
-│   ├── Preprocessing/
-│   └── Evaluation/
-│
-├── Moderate/
-│   ├── Cross_Validation/
-│   ├── Hyperparameter_Tuning/
-│   ├── Feature_Engineering/
-│   ├── Ensemble_Methods/
-│   └── Dimensionality_Reduction/
-│
-├── Untitled14.ipynb
+Machine-Learning-Algorithms/
+├── KNN.ipynb
+├── Logistic_Regression.ipynb
+├── Model_Training.ipynb
+├── SVM.ipynb
 ├── README.md
 └── LICENSE
 ```
 
-> The folder structure above represents the intended organization as the repository expands; the current repository may not yet contain all of these folders.
+## Maintainer
 
-## 🛠️ Tools & Libraries
+Maintained as a machine-learning learning repository by [Rohit Biswas](https://github.com/rohitbiswas1).
 
-| Tool / Library | Use |
-|---|---|
-| Python | Core programming language |
-| NumPy | Numerical computing |
-| Pandas | Data handling and preprocessing |
-| Matplotlib | Visualization |
-| Seaborn | Statistical visualization |
-| Scikit-learn | ML algorithms, preprocessing and evaluation |
-| Jupyter Notebook | Interactive development |
-| Google Colab | Cloud-based notebook execution |
+## Source acknowledgment and license
 
-## ▶️ Getting Started
-
-Clone the repository:
-
-```bash
-git clone https://github.com/soumojit-dev/Basic-Machine-Learning-Codes.git
-cd Basic-Machine-Learning-Codes
-```
-
-Install the commonly used dependencies:
-
-```bash
-pip install numpy pandas matplotlib seaborn scikit-learn jupyter
-```
-
-Start Jupyter Notebook:
-
-```bash
-jupyter notebook
-```
-
-You can also open the notebooks in **Google Colab**.
-
-## 🎯 Learning Goals
-
-This repository is intended to help with:
-
-- Understanding core ML concepts through code
-- Practising different ML algorithms
-- Learning how to preprocess and evaluate datasets
-- Comparing model performance
-- Building confidence with Scikit-learn
-- Progressing from beginner implementations to moderate-level ML workflows
-
-## 🚀 Roadmap
-
-Future additions may include implementations and practice notebooks for:
-
-- Linear Regression
-- Logistic Regression
-- K-Nearest Neighbors
-- Decision Trees
-- Random Forest
-- Support Vector Machines
-- Naive Bayes
-- K-Means Clustering
-- Principal Component Analysis (PCA)
-- Ensemble techniques
-- Hyperparameter optimization
-- Feature engineering workflows
-- End-to-end ML examples
-
-## 👨‍💻 Author
-
-**Soumojit Maitra**  
-B.Tech CSE (AI & ML), Brainware University
-
-GitHub: [soumojit-dev](https://github.com/soumojit-dev)
-
-## 📄 License
-
-This repository is distributed under the license included in the repository.
+The initial notebooks in this repository were copied from [Basic-Machine-Learning-Codes](https://github.com/soumojit-dev/Basic-Machine-Learning-Codes). This README has been rewritten for the present repository. The original project's Apache 2.0 license remains in [LICENSE](LICENSE); see that file for the applicable license terms.
